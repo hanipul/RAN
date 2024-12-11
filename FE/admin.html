@@ -5,26 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="admin.css">
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('collapsed');
+        }
+    </script>
 </head>
 <body>
-    <div class="drawer-container">
-        <div class="drawer">
-            <div class="drawer-item" onclick="window.location.href='edit-pegawai.html'">
-                <h3>Edit Pegawai</h3>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="logo.png" alt="Company Logo">
             </div>
-            <div class="drawer-item" onclick="window.location.href='tambah-pegawai.html'">
-                <h3>Tambah Pegawai</h3>
+            <button class="toggle-button" onclick="toggleSidebar()">☰</button>
+            <nav class="menu">
+                <a href="#" class="menu-item">Dashboard</a>
+                <a href="#" class="menu-item">Inventory</a>
+                <a href="#" class="menu-item">Reports</a>
+                <a href="#" class="menu-item">Suppliers</a>
+                <a href="#" class="menu-item">Orders</a>
+                <a href="#" class="menu-item">Manage Store</a>
+            </nav>
+            <div class="settings">
+                <a href="#" class="menu-item">Settings</a>
+                <a href="#" class="menu-item">Log Out</a>
             </div>
-            <div class="drawer-item" onclick="window.location.href='hapus-pegawai.html'">
-                <h3>Hapus Pegawai</h3>
-            </div>
-        </div>
-        <div class="main-content">
-            <div class="welcome-section">
-                <h1>Selamat datang di Halaman Admin</h1>
-                <p>Pilih salah satu opsi di menu untuk melanjutkan.</p>
-            </div>
-        </div>
+        </aside>
+
+        <main class="content">
+            <header class="content-header">
+                <h1>Orders</h1>
+                <div class="actions">
+                    <button>Export to Excel</button>
+                    <button>Import Orders</button>
+                    <button class="primary">+ New Orders</button>
+                </div>
+            </header>
+
+            <section class="table-section">
+                <div class="table-filters">
+                    <input type="text" placeholder="Search order ID">
+                    <select>
+                        <option>Sales</option>
+                    </select>
+                    <select>
+                        <option>Status</option>
+                    </select>
+                    <button>Filter</button>
+                </div>
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Customer</th>
+                            <th>Sales Channel</th>
+                            <th>Destination</th>
+                            <th>Items</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>001</td>
+                            <td>12/12/2024</td>
+                            <td>John Doe</td>
+                            <td>Online</td>
+                            <td>Jakarta</td>
+                            <td>5</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>002</td>
+                            <td>11/12/2024</td>
+                            <td>Jane Smith</td>
+                            <td>Retail</td>
+                            <td>Bandung</td>
+                            <td>2</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
     </div>
 </body>
 </html>
