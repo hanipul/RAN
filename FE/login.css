@@ -5,10 +5,13 @@
 }
 
 body {
+    background-image: url('images/bg_login.png'); /* Path ke gambar PNG Anda */
+    background-size: cover; /* Agar gambar menutupi seluruh halaman */
+    background-position: center; /* Posisi gambar di tengah */
     font-family: Arial, sans-serif;
-    height: 100vh;
-    background: url('background-image.jpg') no-repeat center center fixed;
-    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Mengisi seluruh tinggi layar */
 }
 
 .login-container {
@@ -76,7 +79,7 @@ h2 {
 .login-btn {
     width: 100%;
     padding: 10px;
-    background-color: #e91e63;
+    background-color: #2065a2;
     color: white;
     border: none;
     border-radius: 4px;
@@ -85,5 +88,5 @@ h2 {
 }
 
 .login-btn:hover {
-    background-color: #c2185b;
+    background-color: #2065a2;
 }

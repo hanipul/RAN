@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
-
 </head>
 <body>
     <div class="login-container">
@@ -15,8 +14,8 @@
                 <div class="user-type">
                     <label for="user-type">Pilih User:</label>
                     <select id="user-type" name="user-type" required>
-                        <option value="admin">Admin</option>
-                        <option value="karyawan">Karyawan</option>
+                        <option value="Logistik Dashboard">LOGISTIK</option>
+                        <option value="Admin Dashboard">ADMIN</option>
                     </select>
                 </div>
                 <div class="input-box">
@@ -42,10 +41,10 @@
             const userType = document.getElementById("user-type").value;
 
             // Arahkan pengguna ke halaman sesuai dengan role yang dipilih
-            if (userType === "admin") {
-                window.location.href = "admin.html"; // Pindah ke halaman admin
-            } else if (userType === "karyawan") {
-                window.location.href = "karyawan.html"; // Pindah ke halaman karyawan (belum ada, nanti ditambahkan)
+            if (userType === "logistik") {
+                window.location.href = "logistik.html"; // Pindah ke halaman admin
+            } else if (userType === "admin") {
+                window.location.href = "admin.html"; // Pindah ke halaman karyawan (belum ada, nanti ditambahkan)
             }
         });
     </script>

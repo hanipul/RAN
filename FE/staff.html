@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="staff.css">
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('collapsed');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="container">
+                <aside class="sidebar">
+                    <div class="sidebar-content">
+                        <div class="logo">
+                            <img src="images/logo.png" alt="Logo" width="120" height="auto" />
+                        </div>
+                        <button class="sidebar-button" onclick="back()">logistik</button>
+                        <button class="sidebar-button" onclick="logout()">Logout</button>
+                    </div>
+                </aside>
+            </div>
+        </aside>
+        
+
+        <main class="content">
+            <section class="table-section">
+                <button onclick="showInsertForm()" class="action-button">Insert</button>
+            
+                <!-- Form untuk mengisi data -->
+                <div id="insertForm" class="form-container hidden">
+                    <h3>Insert Data</h3>
+                    <form id="dataForm" onsubmit="insertData(event)">
+                        <label for="Nama">Nama:</label>
+                        <input type="text" id="id" required>
+                        
+                        <label for="nik">NIK:</label>
+                        <input type="text" id="name" required>
+                        
+                        <label for="date">Tanggal lahir:</label>
+                        <input type="date" id="date" required>
+                        
+                        <label for="posisi">Posisi:</label>
+                        <select id="posisi" required>
+                            <option value="admin">admin</option>
+                            <option value="logistik">logistik</option>
+                            <option value="ob">OB</option>
+                        </select>
+                        
+                        <label for="nomor">Nomor Telepon:</label>
+                        <input type="number" id="nomor" min="12" required>
+                        
+                        <label for="kelamin">Jenis Kelamin:</label>
+                        <input type="text" id="kelamin" required>
+                        
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" required>
+                        
+                        <button type="submit">Add</button>
+                        <button type="button" onclick="hideInsertForm()">Cancel</button>
+                    </form>
+                </div>
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search by product name..." onkeyup="searchTable()" />
+                    <button id="searchButton" onclick="searchTable()">Search</button>
+                </div>
+
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>nik</th>
+                            <th>Date</th>
+                            <th>Posisi</th>
+                            <th>Nomor</th>
+                            <th>kelamin</th>
+                            <th>Address</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="staff.js"></script>
+</body>
+</html>

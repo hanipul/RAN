@@ -10,89 +10,102 @@
             const sidebar = document.querySelector('.sidebar');
             sidebar.classList.toggle('collapsed');
         }
+
     </script>
 </head>
 <body>
     <div class="container">
         <aside class="sidebar">
-            <div class="logo">
-                <img src="LogoRAN.jpg" alt="logo">
-            </div>
-            <button class="toggle-button" onclick="toggleSidebar()">☰</button>
-            <nav class="menu">
-                <a href="#" class="menu-item">Dashboard</a>
-                <a href="#" class="menu-item">Inventory</a>
-                <a href="#" class="menu-item">Reports</a>
-                <a href="#" class="menu-item">Suppliers</a>
-                <a href="#" class="menu-item">Orders</a>
-                <a href="#" class="menu-item">Manage Store</a>
-            </nav>
-            <div class="settings">
-                <a href="#" class="menu-item">Settings</a>
-                <a href="#" class="menu-item">Log Out</a>
+            <div class="sidebar-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" width="120" height="auto" />
+                </div>
             </div>
         </aside>
-
-        <main class="content">
-            <header class="content-header">
-                <h1>Orders</h1>
-                <div class="actions">
-                    <button>Export to Excel</button>
-                    <button>Import Orders</button>
-                    <button class="primary">+ New Orders</button>
+        
+        <main class="main-content">
+            <div class="product-container">
+                <!-- Produk 1 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/anesthesia_mechine.png" alt="Produk 1">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">anesthesia_mechine</p>
+                        <p class="product-id">ID: 00001</p>
+                        <p class="product-date">Tgl Produksi: 01/10/2024</p>
+                        <p class="product-price">Harga: Rp. 1.430.000.000</p>
+                    </div>
                 </div>
-            </header>
 
-            <section class="table-section">
-                <div class="table-filters">
-                    <input type="text" placeholder="Search order ID">
-                    <select>
-                        <option>Sales</option>
-                    </select>
-                    <select>
-                        <option>Status</option>
-                    </select>
-                    <button>Filter</button>
+                <!-- Produk 2 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/defibrillators.png" alt="Produk 2">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">defibrillators</p>
+                        <p class="product-id">ID: 00002</p>
+                        <p class="product-date">Tgl Produksi: 20/026/2024</p>
+                        <p class="product-price">Harga: Rp. 70.000.000</p>
+                    </div>
                 </div>
-                <table class="orders-table">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Order ID</th>
-                            <th>Date</th>
-                            <th>Customer</th>
-                            <th>Sales Channel</th>
-                            <th>Destination</th>
-                            <th>Items</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>001</td>
-                            <td>12/12/2024</td>
-                            <td>John Doe</td>
-                            <td>Online</td>
-                            <td>Jakarta</td>
-                            <td>5</td>
-                            <td><span class="status completed">Completed</span></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>002</td>
-                            <td>11/12/2024</td>
-                            <td>Jane Smith</td>
-                            <td>Retail</td>
-                            <td>Bandung</td>
-                            <td>2</td>
-                            <td><span class="status pending">Pending</span></td>
-                        </tr>
-                        <!-- Add more rows as needed -->
-                    </tbody>
-                </table>
-            </section>
+
+                <!-- Produk 3 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/product3.jpg" alt="Produk 3">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Nama Barang 3</p>
+                        <p class="product-id">ID: 12347</p>
+                        <p class="product-date">Tgl Produksi: 03/03/2023</p>
+                        <p class="product-price">Harga: Rp. 600.000</p>
+                    </div>
+                </div>
+
+                <!-- Produk 4 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/product4.jpg" alt="Produk 4">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Nama Barang 4</p>
+                        <p class="product-id">ID: 12348</p>
+                        <p class="product-date">Tgl Produksi: 04/04/2023</p>
+                        <p class="product-price">Harga: Rp. 550.000</p>
+                    </div>
+                </div>
+
+                <!-- Produk 5 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/product5.jpg" alt="Produk 5">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Nama Barang 5</p>
+                        <p class="product-id">ID: 12349</p>
+                        <p class="product-date">Tgl Produksi: 05/05/2023</p>
+                        <p class="product-price">Harga: Rp. 450.000</p>
+                    </div>
+                </div>
+
+                <!-- Produk 6 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/product6.jpg" alt="Produk 6">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Nama Barang 6</p>
+                        <p class="product-id">ID: 12350</p>
+                        <p class="product-date">Tgl Produksi: 06/06/2023</p>
+                        <p class="product-price">Harga: Rp. 700.000</p>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
+
+    <script src="admin.js"></script>
 </body>
 </html>
