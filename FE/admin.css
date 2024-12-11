@@ -15,6 +15,12 @@ body {
 .sidebar {
     transition: width 0.3s ease;
     width: 250px;
+    height: 100%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .sidebar.collapsed {
