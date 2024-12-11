@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    background-color: #e9f5ff;
+    height: 100vh;
+}
+
+.drawer-container {
+    display: flex;
+    width: 100%;
+}
+
+.drawer {
+    background-color: #1E3A8A; /* Warna biru gelap */
+    width: 250px;
+    padding: 20px;
+    color: white;
+    height: 100vh;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.drawer-item {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #2563eb; /* Warna biru terang */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.drawer-item:hover {
+    background-color: #1d4ed8; /* Biru lebih gelap saat hover */
+    transform: translateX(5px);
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #f4f4f4;
+    height: 100vh;
+}
+
+.welcome-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #1E3A8A; /* Warna biru untuk judul */
+    font-size: 36px;
+}
+
+p {
+    color: #4b5563; /* Warna abu-abu untuk teks */
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Button untuk Logout */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}

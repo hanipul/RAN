@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.csss">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="user-type">
+                    <label for="user-type">Pilih User:</label>
+                    <select id="user-type" name="user-type" required>
+                        <option value="admin">Admin</option>
+                        <option value="karyawan">Karyawan</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+                </div>
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" class="login-btn">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Mencegah form untuk reload halaman
+
+            // Mendapatkan nilai dari pilihan user
+            const userType = document.getElementById("user-type").value;
+
+            // Arahkan pengguna ke halaman sesuai dengan role yang dipilih
+            if (userType === "admin") {
+                window.location.href = "admin.html"; // Pindah ke halaman admin
+            } else if (userType === "karyawan") {
+                window.location.href = "karyawan.html"; // Pindah ke halaman karyawan (belum ada, nanti ditambahkan)
+            }
+        });
+    </script>
+</body>
+</html>
