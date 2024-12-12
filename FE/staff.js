@@ -95,7 +95,7 @@ function deleteRow(index) {
 }
 
 // Fungsi untuk pindah ke halaman staff.html
-function back() {
+function goToLogistik() {
     window.location.href = 'logistik.html';
 }
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff Dashboard</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="staff.css">
     <script>
         function toggleSidebar() {
@@ -21,7 +21,7 @@
                         <div class="logo">
                             <img src="images/logo.png" alt="Logo" width="120" height="auto" />
                         </div>
-                        <button class="sidebar-button" onclick="back()">logistik</button>
+                        <button class="sidebar-button" onclick="goToLogistik()">Logistik</button>
                         <button class="sidebar-button" onclick="logout()">Logout</button>
                     </div>
                 </aside>
@@ -37,26 +37,26 @@
                 <div id="insertForm" class="form-container hidden">
                     <h3>Insert Data</h3>
                     <form id="dataForm" onsubmit="insertData(event)">
-                        <label for="Nama">Nama:</label>
-                        <input type="text" id="id" required>
+                        <label for="id">Nama:</label>
+                        <input type="text" id="nama" required>
                         
                         <label for="nik">NIK:</label>
-                        <input type="text" id="name" required>
+                        <input type="text" id="nik" required>
                         
-                        <label for="date">Tanggal lahir:</label>
+                        <label for="date">Tanggal Lahir:</label>
                         <input type="date" id="date" required>
                         
                         <label for="posisi">Posisi:</label>
-                        <select id="posisi" required>
-                            <option value="admin">admin</option>
-                            <option value="logistik">logistik</option>
-                            <option value="ob">OB</option>
+                        <select id="sales" required>
+                            <option value="Logistik">Logistik</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Sales">Sales</option>
                         </select>
                         
-                        <label for="nomor">Nomor Telepon:</label>
+                        <label for="Nomor">Nomor HP:</label>
                         <input type="number" id="nomor" min="12" required>
                         
-                        <label for="kelamin">Jenis Kelamin:</label>
+                        <label for="kelamin">Kelamin:</label>
                         <input type="text" id="kelamin" required>
                         
                         <label for="address">Address:</label>
@@ -76,11 +76,11 @@
                     <thead>
                         <tr>
                             <th>Nama</th>
-                            <th>nik</th>
-                            <th>Date</th>
+                            <th>NIK</th>
+                            <th>Tanggal Lahir</th>
                             <th>Posisi</th>
-                            <th>Nomor</th>
-                            <th>kelamin</th>
+                            <th>Nomor HP</th>
+                            <th>Kelamin</th>
                             <th>Address</th>
                             <th>Status</th>
                         </tr>
@@ -91,6 +91,6 @@
             </section>
         </main>
     </div>
-    <script src="staff.js"></script>
+    <script src="staff.css"></script>
 </body>
 </html>
